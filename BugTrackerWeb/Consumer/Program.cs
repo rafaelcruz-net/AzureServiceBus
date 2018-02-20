@@ -28,6 +28,7 @@ namespace Consumer
 
             queueClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);
 
+            Console.WriteLine($"Consumer is ready");
             Console.ReadKey();
 
             queueClient.CloseAsync().Wait();
